@@ -1,7 +1,9 @@
 package com.abcnull.testcase;
 
 import com.abcnull.basetest.BaseTest;
+import com.abcnull.listener.*;
 import com.abcnull.pageobject.page.BaiduPage;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 /**
@@ -11,6 +13,7 @@ import org.testng.annotations.Test;
  * @version 1.0.0
  * @date 2020/1/28
  */
+@Listeners({RePrioritizingListener.class,ExtentTestReporterListener.class,TestLogListener.class,TestReportListener.class})
 public class BaiduTest extends BaseTest {
     private BaiduPage baiduPage;
 
